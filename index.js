@@ -9,12 +9,18 @@ const { handlerError } = require("./middlewares/handlerError.js");
 
 // CONFIG
 const app = express();
+const cors = require("cors");
 const { APP_URL, APP_PORT } = process.env;
 const host = `${APP_URL}:${APP_PORT}`;
 
 // MIDDLEWARE
 app.use(express.static("public"));
 app.use(express.json());
+app.use(
+  cors({
+    origin: `http://localhost:5173`,
+  })
+);
 
 // ROUTERS
 
