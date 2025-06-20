@@ -33,5 +33,5 @@ app.use(handlerError);
 // LISTEN
 
 app.listen(APP_PORT, () => {
-  console.log(`Serve in ascolto su ${host}`);
+  console.log(`Server in ascolto su ${host}`);
 });
